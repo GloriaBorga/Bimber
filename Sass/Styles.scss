@@ -1,0 +1,526 @@
+html, body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+html {
+  font-size: 13px; }
+
+h1 {
+  font-size: 2rem; }
+
+h2 {
+  font-size: 1rem; }
+
+p, li {
+  font-size: 1.3rem; }
+
+/*=== Header Styles ===*/
+header {
+  background: #fd5c63;
+  color: #EBEBD3;
+  position: relative;
+  z-index: 999999; }
+  header:after {
+    content: '';
+    clear: both;
+    display: block; }
+
+.nav-container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  position: fixed;
+  display: flex;
+  transition: .5s;
+  z-index: 99999; }
+
+.my-row {
+  width: 100%; }
+
+.logo {
+  margin-top: 5px;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Amatic SC';
+  color: white; }
+
+.social-media {
+  font-size: 1.8rem;
+  color: azure;
+  text-align: right; }
+  .social-media a {
+    cursor: pointer;
+    color: floralwhite; }
+
+.site-nav {
+  position: absolute;
+  top: 100%;
+  background:#ffffffe8;
+  clip-path: circle(0px at top left);
+  transition: clip-path ease-in-out 700ms;
+  border-radius: 2% 2%; }
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+.site-nav li {
+    border-bottom: 1px solid #fd5c633d; }
+.site-nav li:last-child {
+    border-bottom: none; }
+.site-nav a {
+    color: #fd5c63;
+    display: block;
+    padding: 1em 1em 1em 1em;
+    text-decoration: none;
+    font-family: 'amatic SC';
+    font-weight: 600; }
+.hov:hover {
+      transition: ease-in-out 1000ms;
+      background: #fd5c63;
+      color: #464655; }
+.site-nav--icon {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-right: 1em;
+    width: 1.1em;
+    text-align: right;
+    color: #fd5c63;}
+ .hov:hover > .site-nav--icon{
+    color: white;
+}
+
+.site-nav--open {
+  clip-path: circle(250% at top left); }
+
+.menu-toggle {
+  padding: 1em;
+  position: absolute;
+  top: .4em;
+  cursor: pointer; }
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: #EBEBD3;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
+  transition: all ease-in-out 250ms; }
+
+.hamburger::before {
+  transform: translateY(-6px); }
+
+.hamburger::after {
+  transform: translateY(3px); }
+
+.open .hamburger {
+  transform: rotate(45deg); }
+
+.open .hamburger::before {
+  opacity: 0; }
+
+.open .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg); }
+
+/*=== Stage Styles ===*/
+#stage {
+  position: relative;
+  height: 100%;
+  background: url("../images/background.png");
+  background-position: center;
+  background-size: cover; }
+
+#stage-caption {
+  max-width: 75rem;
+  margin: 0 auto;
+  text-align: center; }
+  #stage-caption h2 {
+    color: white;
+    text-align: center; }
+
+.slogan {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  font-size: 4rem;
+  font-family: 'amatic SC';
+  text-transform: uppercase;
+  color: white;
+  padding-top: 5rem; }
+
+.slogan-2 {
+  font-weight: 800;
+  font-size: 6rem;
+  font-family: 'amatic SC';
+  color: #fd5c63;
+  text-shadow: 3px 1px #ffffff, 0 1px #969292, 1px 0 #adadad, 0 -1px #a9a7a7;
+  text-transform: uppercase; }
+
+.circle .fa {
+  color: white;
+  margin: 0;
+  padding: 0;
+  animation: animate 2s linear infinite; }
+
+.phone-logo {
+  width: 100%;
+  height: 60%;
+  background-image: url("../images/phone-logo.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: unset;
+  position: absolute;
+  /*background-size: contain;*/
+  top: 60%;
+  overflow: hidden; }
+
+.circle {
+  position: absolute;
+  margin-left: 96%;
+  margin-top: 19%;
+  transform: translate(-50%, -50%);
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 36px;
+  font-size: 20px;
+  overflow: hidden;
+  cursor: pointer; }
+  .circle .fa {
+    color: white;
+    margin: 0;
+    padding: 0;
+    animation: animate 2s linear infinite; }
+
+/* === Section Styles === */
+#feature-one {
+  position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.tutorial {
+  display: none; }
+.bcg {
+  background-color: ghostwhite;
+}
+.bcg-2 {
+  background-color: darkcyan;
+}
+
+/* === MOBILE === */
+.mobile {
+  padding: 3rem 0;
+  background-color: darkcyan; 
+  color: white; }
+
+.slide_title {
+  font-family: 'amatic SC';
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #fd5c63;
+  font-weight: 800;
+  padding-top: 2rem;
+  margin-left: 5%; }
+
+.slide_text {
+  margin-right: 30%;
+  margin-left: 5%;
+  padding-top: 1rem;
+  font-family: 'nunito';
+  font-size: 1.5rem;
+  text-align: justify; }
+
+.people_discovery_pl {
+  border-radius: 3%;
+  width: 70%;
+  transition: transform 0.7s ease; }
+
+.slide-img {
+  border-radius: 5%;
+  /*width: 70%;*/ }
+
+.carousel-control-prev {
+  top: 78%;
+  left: 62%;
+  height: 10%;
+  cursor: pointer; }
+
+.carousel-control-next {
+  right: 0;
+  top: 78%;
+  left: 23%;
+  height: 10%;
+  cursor: pointer; }
+
+/* === Section three === */
+.my-jumbotron {
+  background-image: url("../images/background-3.png");
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 0px; }
+
+.display-4 {
+  padding-top: 1rem;
+  font-weight: 200;
+  line-height: 1;
+  font-size: 2.6rem;
+  font-family: 'Oswald';
+  text-transform: uppercase;
+  margin: 20px;
+  color: white; }
+
+.name {
+  padding-left: 30px;
+  font-style: italic;
+  color: white; }
+
+.quotation {
+  padding-left: 50px;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: white; }
+
+/* === Footer Styles === */
+#main-footer {
+  background: #262F36;
+  color: white;
+  padding: 1rem 0;
+  position: relative; }
+  #main-footer h6 {
+    color: #718FA9; }
+  #main-footer a {
+    color: #6C5F73; }
+
+/* ================= Media Queries ==================================*/
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 11px; }
+
+  .slogan {
+    font-size: 3rem; }
+
+  .slogan2 {
+    font-size: 5rem; } }
+@media screen and (min-width: 420px) {
+  html {
+    font-size: 13px; } }
+@media screen and (min-width: 610px) {
+  html {
+    font-size: 16px; } }
+@media screen and (min-width: 680px) {
+  html {
+    font-size: 17px; } }
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 17px; }
+
+  .slide_title {
+    font-size: 3rem; }
+
+  .slide_text {
+    font-size: 1.2rem; } }
+@media only screen and (min-width: 760px) {
+  .mobile {
+    display: none; }
+
+  .tutorial {
+    padding: 3rem 0;
+    overflow: hidden;
+    display: unset; }
+
+  .slide_title {
+    font-family: 'amatic SC';
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #fd5c63;
+    margin-top: 200px;
+    font-weight: 800; }
+
+  .slide_text {
+    padding-top: 1rem;
+    font-family: 'nunito';
+    font-size: 1.4rem;
+    margin-right: 10%;
+    text-align: justify;
+    margin-bottom: 30rem;
+    color: white; }
+
+  .card-text {
+    color: white; }}
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 18px; } }
+@media screen and (min-width: 1000px) {
+  .slide_title {
+    font-size: 3.5rem; }
+    
+  .slide_text {
+    margin-bottom: 30rem;
+    font-size: 1.4rem;
+    margin-right: 30%; } 
+  .people_discovery_pl:hover {
+    transform: scale(1.2, 1.2) translate(0px, 0px); }
+  }
+    
+@media (max-width: 1000px) {
+  .circle {
+        display: none; } }
+@media screen and (min-width: 1400px) {
+  .slide_text {
+    margin-bottom: 30rem;
+    font-size: 1.4rem;
+    margin-right: 30%; }}
+    
+@keyframes animate {
+  0% {
+    transform: translateY(-50px);
+    text-shadow: 0 50px 0 white; }
+  20% {
+    transform: translateY(0px);
+    text-shadow: 0 10px 0 white; }
+  40% {
+    transform: translateY(0px);
+    text-shadow: 0 -10px 0 white; }
+  60% {
+    transform: translateY(0px);
+    text-shadow: 0 0px 0 white; }
+  100% {
+    transform: translateY(100px);
+    text-shadow: 0 -50px 0 white; } }
+  /* ============= TUTO ============= */
+  .phone-container {
+    position: absolute;
+    top: 100px;
+    max-width: 100%;
+    right: 14% }
+
+  .phone-container-fixed {
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -25%);
+    right: 64%; }
+
+  .phone-container-fixed-bot {
+    position: absolute;
+    right: 14%;
+    top: 3000px; }
+
+  .phone-screen {
+    position: relative;
+    top: -438px;
+    width: 234px;
+    height: 393px;
+    right: -11px;
+    z-index: 1;
+    overflow: hidden; }
+
+  #phone-fot-exp {
+    position: relative;
+    top: -1px;
+    z-index: 2; }
+
+  #phone-fot-chat {
+    position: relative;
+    top: -32px;
+    z-index: 1; }
+
+  #phone-fot-prof {
+    position: relative;
+    top: -63px;
+    z-index: 1; }
+
+  .profile-screen {
+    position: relative;
+    width: 214px;
+    height: 214px;
+    left: 10px;
+    top: -410px; }
+
+  #girl-one-prof {
+    position: relative;
+    z-index: 3; }
+
+  #boy-one-prof {
+    position: relative;
+    top: -214px;
+    z-index: 2; }
+
+  .match {
+    position: relative;
+    top: -670px;
+    z-index: 10;
+    opacity: 0.9;
+    height: 363px;
+    clip-path: circle(0px at 25% 25%);
+    transition: clip-path ease-in-out 1000ms; }
+
+  .bum {
+    clip-path: circle(250% at center); }
+
+  .chat-screen {
+    position: relative;
+    top: -1033px;
+    /* left: 234px; */ }
+
+  #czat {
+    position: relative;
+    top: 0;
+    z-index: 15; }
+
+  #chat1 {
+    position: relative;
+    top: -300px;
+    z-index: 16;
+    display: none;
+    left: 77px; }
+
+  #chat2 {
+    position: relative;
+    top: -300px;
+    z-index: 16;
+    display: none; }
+
+  #chat3 {
+    position: relative;
+    top: -254px;
+    right: 174px;
+    z-index: 16;
+    display: none; }
+
+  #chat4 {
+    position: relative;
+    top: -267px;
+    z-index: 16;
+    display: none;
+    left: 0px; }
+
+  .party {
+    position: relative;
+    clip-path: circle(0px at 50% 92%);
+    transition: clip-path ease-in-out 1000ms;
+    top:  -1760px;;
+    z-index: 10; }
+
+  .bum2 {
+    clip-path: circle(250% at 50% 92%); }
+
+  #prof {
+    position: relative;
+    top: -514px;
+    right: 468px;
+    z-index: 10; } 
+
+
+
