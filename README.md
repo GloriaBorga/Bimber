@@ -1,4 +1,4 @@
 # Bimber
-Website project for my frinds Bimber App. 
+Website project for my friends Bimber App. 
 
 https://bimber.fun/
